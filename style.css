@@ -1,0 +1,25 @@
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightgray;
+    color: black;
+    margin: 20px;
+}
+
+/* Headings */
+h1 {
+    color: blue;
+}
+
+h2 {
+    color: darkblue;
+}
+
+/* Buttons */
+button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}

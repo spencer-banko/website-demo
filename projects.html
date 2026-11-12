@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        (function () {
+            var t = localStorage.getItem("theme") ||
+                (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+            document.documentElement.setAttribute("data-theme", t);
+        })();
+    </script>
+</head>
+<body>
+
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a class="nav-brand" href="index.html">Your Name</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://www.linkedin.com/in/yourname/" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><button id="theme-toggle" aria-label="Toggle dark mode">🌙 Dark</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <section>
+            <h2>Projects</h2>
+            <p>A few things I've worked on. Replace these placeholder cards with your own projects.</p>
+
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Project One</h3>
+                    <p>A short description of this project &mdash; what it does and what problem it solves.</p>
+                    <div class="card-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <a class="btn btn-secondary" href="#" target="_blank" rel="noopener">View Project</a>
+                </div>
+                <div class="card">
+                    <h3>Project Two</h3>
+                    <p>A short description of this project &mdash; what it does and what problem it solves.</p>
+                    <div class="card-tags">
+                        <span class="tag">API</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <a class="btn btn-secondary" href="#" target="_blank" rel="noopener">View Project</a>
+                </div>
+                <div class="card">
+                    <h3>Project Three</h3>
+                    <p>A short description of this project &mdash; what it does and what problem it solves.</p>
+                    <div class="card-tags">
+                        <span class="tag">CSS</span>
+                        <span class="tag">Design</span>
+                    </div>
+                    <a class="btn btn-secondary" href="#" target="_blank" rel="noopener">View Project</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            <a href="https://www.linkedin.com/in/yourname/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="resume.html">Resume</a>
+            <a href="contact.html">Contact</a>
+        </p>
+        <p>&copy; <span class="current-year"></span> Your Name. Built with HTML, CSS &amp; JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

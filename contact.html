@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        (function () {
+            var t = localStorage.getItem("theme") ||
+                (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+            document.documentElement.setAttribute("data-theme", t);
+        })();
+    </script>
+</head>
+<body>
+
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a class="nav-brand" href="index.html">Your Name</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://www.linkedin.com/in/yourname/" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><button id="theme-toggle" aria-label="Toggle dark mode">🌙 Dark</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <section>
+            <h2>Contact Me</h2>
+            <p>
+                Fill out the form below and it will open your email client with a pre-filled
+                message addressed to me. (This site is static HTML/CSS/JS with no backend, so
+                there's no server-side form submission &mdash; it relies on your email app.)
+            </p>
+
+            <form id="contact-form">
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+                <p id="form-status" class="form-status" role="status"></p>
+            </form>
+
+            <p class="resume-fallback">
+                Prefer to connect directly? Find me on
+                <a href="https://www.linkedin.com/in/yourname/" target="_blank" rel="noopener">LinkedIn</a>.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            <a href="https://www.linkedin.com/in/yourname/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="resume.html">Resume</a>
+            <a href="contact.html">Contact</a>
+        </p>
+        <p>&copy; <span class="current-year"></span> Your Name. Built with HTML, CSS &amp; JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
